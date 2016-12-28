@@ -1,6 +1,5 @@
 import sys
 from player import Player
-from random import randrange
 
 
 class Menu:
@@ -8,14 +7,7 @@ class Menu:
 
     def __init__(self):
         self.player = Player()
-        self.choices = {
-            "A": self.drink,
-            "B": self.moderate,
-            "C": self.full_speed,
-            "D": self.rest,
-            "E": self.status,
-            "Q": self.quit
-        }
+        self.choices = dict(A=self.drink, B=self.moderate, C=self.full_speed, D=self.rest, E=self.status, Q=self.quit)
 
     def display_menu(self):
         print("""
